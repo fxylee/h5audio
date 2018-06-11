@@ -22,6 +22,13 @@
     // 下一首
     currentIndex = index;
 
+    list.forEach(function (item) {
+      item.className = '';
+      // list[currentIndex].parentNode.className = '';
+    });
+    list[currentIndex].className = 'active';
+    // list[currentIndex].parentNode.className = 'active-li';
+
     player(list[currentIndex].dataset.src);
   }
 
@@ -48,4 +55,15 @@
     
     console.log(e);
   });
+
+  // document.addEventListener('DOMContentLoaded', function (e) {
+  //   // next(0)
+  // });
+
+  // window.addEventListener('load', function (e) {
+  //   console.log(3);
+  // })
 })();
+
+
+
